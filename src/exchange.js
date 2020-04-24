@@ -2,7 +2,7 @@ export class Exchange {
 
   async currency() {
     try {
-      let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/enriched/GBP/JPY`);
+      let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
       let jsonifiedResponse;
       if (response.ok && response.status === 200) {
         jsonifiedResponse = await response.json();
