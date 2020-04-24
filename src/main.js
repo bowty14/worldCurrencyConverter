@@ -17,7 +17,7 @@ $(document).ready(function () {
   
     function getElements(response) {
       if (response) {
-        $("#money").html(`${response.AUD}`);
+        $("#money").html(`${response.conversion_rates.AUD * response.conversion_rates.USD}`);
       }
     }
   });
