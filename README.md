@@ -1,4 +1,4 @@
-# _Monster Fight_
+# _World Currency Converter_
 
 #### _This is a simple currency converter USD being the base currency._
 
