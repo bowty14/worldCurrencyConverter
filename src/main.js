@@ -17,10 +17,20 @@ $(document).ready(function () {
       exchange.australia = response.conversion_rates.AUD;
       exchange.argentine = response.conversion_rates.ARS;
       exchange.bulgarian = response.conversion_rates.BGN;
-      exchange.canada = response.conversion_rates.CAD;
+      exchange.colombia = response.conversion_rates.COP;
       exchange.europe = response.conversion_rates.EUR;
       exchange.change(response);
-      $("#money").html(exchange.changed);
+      if (exchange.select === "AUD") {
+        $("#money").html(exchange.usd + " USD " + " is " + exchange.changedAus + " Australian currency.");
+      } else if (exchange.select === "ARS") {
+        $("#money").html(exchange.usd + " USD " + " is " + exchange.changedArg + " Agentina currency.");
+      } else if (exchange.select === "BGN") {
+        $("#money").html(exchange.usd + " USD " + " is " + exchange.changedBul + " Bulgarian currency.");
+      } else if (exchange.select === "COP") {
+        $("#money").html(exchange.usd + " USD " + " is " + exchange.changedCop + " Colombian currency.");
+      } else if (exchange.select === "EUR") {
+        $("#money").html(exchange.usd + " USD " + " is " + exchange.changedEur + " European currency.");
+      }
     })();
   });
 });

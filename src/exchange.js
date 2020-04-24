@@ -2,7 +2,7 @@ export class Exchange {
 
   async currency() {
     try {
-      let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
+      let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/enriched/GBP/JPY`);
       let jsonifiedResponse;
       if (response.ok && response.status === 200) {
         jsonifiedResponse = await response.json();
@@ -20,15 +20,15 @@ export class Exchange {
 
   change() {
     if (this.select === "AUD") {
-      this.changed = (this.usd * this.australia.toFixed());
+      this.changedAus = (this.usd * this.australia.toFixed());
     } else if (this.select === "ARS") {
-      this.changed = (this.usd * this.argentine.toFixed())
+      this.changedArg = (this.usd * this.argentine.toFixed())
     } else if (this.select === "BGN") {
-      this.changed = (this.usd * this.bulgarian.toFixed())
-    } else if (this.select === "CAD") {
-      this.changed = (this.usd * this.canada.toFixed())
+      this.changedBul = (this.usd * this.bulgarian.toFixed())
+    } else if (this.select === "COP") {
+      this.changedCop = (this.usd * this.colombia.toFixed())
     } else if (this.select === "EUR") {
-      this.changed = (this.usd * this.europe.toFixed())
+      this.changedEur = (this.usd * this.europe.toFixed())
     }
   }
 }
