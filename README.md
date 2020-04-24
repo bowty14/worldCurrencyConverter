@@ -1,28 +1,25 @@
 # _Monster Fight_
 
-#### _This app will pit two monsters form the D&D multiverse against each other in a battle to the death!_
+#### _This is a simple currency converter USD being the base currency._
 
-#### By _**Tyler Bowerman & Reid Ashwill**_
+#### By _**Tyler Bowerman**_
 
 ## Description
 
-_We are using this app as an opportunity to explore the open5e API that we will be using during team week._
+_This app will convert the amount entered into the text field to the selected counties currency._
  
 
 ## Specifications
 
 |   Behavior Description   |  Input Ex.   |        Output Ex.        |
 |------------------------------|--------------|--------------------------|
-| 1.[x]Make two seperate API calls to the open5e API to return two monster objects
-| 2.[x]Display the stats of these monsters to the user.
-| 3.[x]Creating a "dice roll" function to simulate the attacks the monsters are capable of
-| 4.[x]Adding the attack bonus of the monsters to the dice roll
-| 5.[x]compare that number to the other monsters AC to determine whether or not the attack was sucessful.
-| 6.[x]If attack is sucessful, reduce the target monsters hit points accordingly
-| 7.[x]If one monsters hit points drops to 0, it is dead, and the other monster wins!
+| 1.[x]Make API call to Exchange rate API.
+| 2.[x]create a function that muliplies US dollar amount by exchange rate of selected currency.
+| 3.[x]create a select drop down for the different currencies to choose from.
+| 4.[x]create a function that displays the converted amount to the user with a button.
 
 ## Known Bugs
-* No known bugs.
+* If the input field is left empty it will return "NaN USD is NaN Australian currency." 
 
 
 ## Setup/Installation Requirements
@@ -36,6 +33,7 @@ _We are using this app as an opportunity to explore the open5e API that we will 
 * HTML
 * CSS
 * Bootstrap 4.4.1
+* Animate.css
 * jQuery 3.4.1
 * JavaScript
 * Node
@@ -46,4 +44,4 @@ _We are using this app as an opportunity to explore the open5e API that we will 
 
 *This software is licensed under the MIT license*
 
-Copyright (c) 2020 **Reid Ashwill & Tyler Bowerman**
+Copyright (c) 2020 **Tyler Bowerman**
