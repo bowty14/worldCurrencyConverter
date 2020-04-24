@@ -10,7 +10,6 @@ export class Exchange {
       } else {
         jsonifiedResponse = false;
       }
-      console.log(jsonifiedResponse);
       return jsonifiedResponse;
     } catch (error) {
       return false;

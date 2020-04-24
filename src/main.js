@@ -1,18 +1,20 @@
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import './animate.css';
 import $ from "jquery";
 import { Exchange} from './../src/exchange.js';
 
 
 $(document).ready(function () {
   
-  $("#exchange").click(function(event) {
+  $("#exchange").click(function (event) {
     event.preventDefault();
     $("#output").show();
-
     (async () => {
       let exchange = new Exchange();
       exchange.usd = parseInt($("#usd").val());
+      console.log(exchange.usd);
       exchange.select = $("#currency").val();
       const response = await exchange.currency();
       exchange.australia = response.conversion_rates.AUD;
@@ -26,7 +28,10 @@ $(document).ready(function () {
       exchange.southKorean = response.conversion_rates.KRW;
       exchange.paraguayan = response.conversion_rates.PYG;
       exchange.change(response);
-      if (exchange.select === "AUD") {
+      
+      if (exchange.select === "AUD" && exchange.usd === 0) {
+        $("#money").html("");
+      }else if (exchange.select === "AUD") {
         $("#money").html(exchange.usd + " USD " + " is " + exchange.changedAus + " Australian currency.");
       } else if (exchange.select === "ARS") {
         $("#money").html(exchange.usd + " USD " + " is " + exchange.changedArg + " Agentina currency.");
@@ -46,7 +51,8 @@ $(document).ready(function () {
         $("#money").html(exchange.usd + " USD " + " is " + exchange.changedKor + " South Korean currency.");
       } else if (exchange.select === "PYG") {
         $("#money").html(exchange.usd + " USD " + " is " + exchange.changedPar + " Paraguayan currency.");
-      }
+      } 
+      
     })();
   });
 });

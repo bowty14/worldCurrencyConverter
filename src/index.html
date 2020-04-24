@@ -7,10 +7,10 @@
 </head>
 <body>
   <h1>World Currency Exchange</h1>
-  <form id="currencySelect">
+  <form id="currencySelect" class="animated bounceIn">
     <h3 class="choose">Select a currency for exchange</h3>
     <label for="dollarAmount">Enter US dollar amount</label>
-    <input type="text" name="usdAmount" id="usd">
+    <input type="number" name="usdAmount" id="usd">
     <select id="currency">
       <option id="AUD" value="AUD">Australian Dollar</option>
       <option id="ARS" value="ARS">Argentine</option>
@@ -26,11 +26,12 @@
     <button id="exchange" class="btn btn-info" type="submit">exchange</button>
   </form>
 </div>
-<div><span id="exchangeReturn"></span></div>
 </br>
 </br>
+<div>
 <div id="output" class="jumbotron">
 <h4 id="money"></h4>
+</div>
 </div>
 </body>
 </html>
