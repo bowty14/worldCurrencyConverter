@@ -1,0 +1,10 @@
+body {
+  background-image: url(https://bit.ly/3aD0sMZ);
+  color: white;
+}
+#output {
+  display: none;
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+  opacity: 90%;
+}

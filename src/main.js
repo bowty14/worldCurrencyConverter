@@ -1,4 +1,4 @@
-import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
 import { Exchange} from './../src/exchange.js';
@@ -8,6 +8,7 @@ $(document).ready(function () {
   
   $("#exchange").click(function(event) {
     event.preventDefault();
+    $("#output").show();
 
     (async () => {
       let exchange = new Exchange();
