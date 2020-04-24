@@ -11,13 +11,13 @@ $(document).ready(function () {
 
     (async () => {
       let exchange = new Exchange();
-      const response = await exchange.exchange();
+      const response = await exchange.change();
       getElements(response);
     })();
-  
     function getElements(response) {
+      console.log(response);
       if (response) {
-        $("#money").html(`${response.conversion_rates.AUD * response.conversion_rates.USD}`);
+        $("#money").html(`${response.conversion_rates.AUD}`);
       }
     }
   });
