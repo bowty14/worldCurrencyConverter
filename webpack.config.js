@@ -19,7 +19,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'dnd-api-test',
+      title: 'currency-exchange',
       template: './src/index.html',
       inject: 'body'
     })

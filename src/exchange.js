@@ -1,6 +1,6 @@
 export class Exchange {
 
-  async currencyExchange() {
+  async exchange() {
     try {
       let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
       let jsonifiedResponse;
@@ -17,3 +17,16 @@ export class Exchange {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
