@@ -7,6 +7,7 @@
 ## Description
 
 _This app will convert the amount entered into the text field to the selected counties currency._
+_This app can be viewed at https://reverent-khorana-e70790.netlify.app/ _
  
 
 ## Specifications
@@ -14,7 +15,7 @@ _This app will convert the amount entered into the text field to the selected co
 |   Behavior Description   |  Input Ex.   |        Output Ex.        |
 |------------------------------|--------------|--------------------------|
 | 1.[x]Make API call to Exchange rate API.
-| 2.[x]create a function that muliplies US dollar amount by exchange rate of selected currency.
+| 2.[x]create a function that muliplies US dollar amount by exchange rate of selected currency. | 10 USD | 20 AUD
 | 3.[x]create a select drop down for the different currencies to choose from.
 | 4.[x]create a function that displays the converted amount to the user with a button.
 
@@ -43,5 +44,5 @@ _This app will convert the amount entered into the text field to the selected co
 ### License
 
 *This software is licensed under the MIT license*
-
+*If you download this program and run into any bugs that are not listed above or if you have an idea on how to fix any current bugs please feel free to reach out me at tylerbowerman@yahoo.com!*
 Copyright (c) 2020 **Tyler Bowerman**
